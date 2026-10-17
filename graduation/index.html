@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5faff">
+  <title>Undangan Wisuda SMK SYADAM 2027</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- COVER: VIDEO DAN NAMA TAMU SAJA -->
+  <section id="cover" class="cover">
+    <video class="cover-video" autoplay muted loop playsinline>
+      <source src="assets/cover.mp4" type="video/mp4">
+    </video>
+
+    <div class="cover-shade"></div>
+
+    <div class="cover-content">
+      <p class="eyebrow">UNDANGAN WISUDA</p>
+      <h1>SMK SYADAM</h1>
+      <p>Tahun Pelajaran 2027</p>
+
+      <div class="guest-cover">
+        <span>Kepada Yth.</span>
+        <h2 id="guestName">Tamu Undangan</h2>
+      </div>
+
+      <button id="openInvitation" class="btn-primary">
+        Buka Undangan
+      </button>
+    </div>
+  </section>
+
+  <!-- ISI UNDANGAN -->
+  <main id="invitation" hidden>
+
+    <!-- VIDEO BACKGROUND -->
+    <section class="hero section">
+      <video class="background-video"
+             autoplay muted loop playsinline>
+        <source src="assets/background.mp4" type="video/mp4">
+      </video>
+
+      <div class="hero-shade"></div>
+
+      <div class="hero-content">
+        <p class="eyebrow">MOMEN ISTIMEWA</p>
+        <h1>Wisuda dan Pelepasan Siswa</h1>
+        <h2>SMK SYADAM</h2>
+        <p>Tahun Pelajaran 2027</p>
+
+        <div class="gold-line"></div>
+
+        <p class="hero-description">
+          Merayakan perjalanan, mengenang kebersamaan,
+          menyambut masa depan.
+        </p>
+
+        <a href="#acara" class="btn-primary">
+          Lihat Undangan
+        </a>
+      </div>
+    </section>
+
+    <!-- SAMBUTAN -->
+    <section class="section floral-section greeting">
+      <div class="content-panel">
+        <p class="eyebrow">DENGAN PENUH RASA SYUKUR</p>
+        <h2>Undangan Wisuda</h2>
+        <div class="gold-line"></div>
+
+        <p>
+          Dengan hormat, kami mengundang Bapak/Ibu/Saudara/i
+          untuk menghadiri acara wisuda dan pelepasan siswa
+          SMK SYADAM Tahun Pelajaran 2027.
+        </p>
+
+        <p>
+          Kehadiran dan doa restu Anda menjadi kebahagiaan
+          bagi kami dalam merayakan pencapaian para siswa.
+        </p>
+
+        <h3 id="guestNameInside">Tamu Undangan</h3>
+      </div>
+    </section>
+
+    <!-- INFORMASI ACARA -->
+    <section id="acara" class="section floral-section">
+      <div class="content-panel">
+        <p class="eyebrow">CATAT TANGGALNYA</p>
+        <h2>Informasi Acara</h2>
+        <div class="gold-line"></div>
+
+        <div class="event-card">
+          <h3 id="eventTitle">Wisuda SMK SYADAM 2027</h3>
+          <p id="eventDate"></p>
+          <p id="eventTime"></p>
+          <p id="eventLocation"></p>
+
+          <a id="mapsLink" class="btn-outline"
+             href="https://maps.google.com"
+             target="_blank" rel="noopener">
+            Lihat Lokasi
+          </a>
+        </div>
+
+        <h3 class="countdown-heading">Menuju Hari Wisuda</h3>
+
+        <div id="countdown" class="countdown">
+          <div><strong id="days">00</strong><span>Hari</span></div>
+          <div><strong id="hours">00</strong><span>Jam</span></div>
+          <div><strong id="minutes">00</strong><span>Menit</span></div>
+          <div><strong id="seconds">00</strong><span>Detik</span></div>
+        </div>
+
+        <p id="countdownMessage" class="small-note"></p>
+      </div>
+    </section>
+
+    <!-- GALERI JURUSAN -->
+    <section id="galeri" class="section floral-section">
+      <div class="content-panel gallery-panel">
+        <p class="eyebrow">CERITA DAN KENANGAN</p>
+        <h2>Galeri Kenangan Bersama</h2>
+        <p class="section-intro">
+          Empat jurusan, satu perjalanan, banyak kenangan.
+        </p>
+
+        <div class="gallery-grid">
+
+          <article class="gallery-card">
+            <img src="assets/perhotelan.jpg"
+                 alt="Foto jurusan Perhotelan">
+            <div class="gallery-info">
+              <h3>Perhotelan</h3>
+              <p>Kenangan dan perjalanan siswa Perhotelan.</p>
+              <video controls playsinline preload="metadata">
+                <source src="assets/background.mp4"
+                        type="video/mp4">
+              </video>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <img src="assets/mplb.jpg" alt="Foto jurusan MPLB">
+            <div class="gallery-info">
+              <h3>MPLB</h3>
+              <p>Kenangan dan perjalanan siswa MPLB.</p>
+              <video controls playsinline preload="metadata">
+                <source src="assets/background.mp4" type="video/mp4">
+              </video>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <img src="assets/dkv.jpg" alt="Foto jurusan DKV">
+            <div class="gallery-info">
+              <h3>Desain Komunikasi Visual</h3>
+              <p>Kreativitas, karya, dan cerita siswa DKV.</p>
+              <video controls playsinline preload="metadata">
+                <source src="assets/background.mp4" type="video/mp4">
+              </video>
+            </div>
+          </article>
+
+          <article class="gallery-card">
+            <img src="assets/tkjt.jpg" alt="Foto jurusan TKJT">
+            <div class="gallery-info">
+              <h3>TKJT</h3>
+              <p>Kenangan dan perjalanan siswa TKJT.</p>
+              <video controls playsinline preload="metadata">
+                <source src="assets/background.mp4" type="video/mp4">
+              </video>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KONFIRMASI KEHADIRAN -->
+    <section id="rsvp" class="section floral-section">
+      <div class="content-panel">
+        <p class="eyebrow">KONFIRMASI KEHADIRAN</p>
+        <h2>Apakah Anda Hadir?</h2>
+        <p class="section-intro">
+          Mohon konfirmasikan kehadiran Anda.
+        </p>
+
+        <form id="rsvpForm" class="rsvp-form">
+          <label for="rsvpName">Nama</label>
+          <input id="rsvpName" type="text" required>
+
+          <label for="attendance">Konfirmasi kehadiran</label>
+          <select id="attendance">
+            <option value="Hadir">Ya, saya akan hadir</option>
+            <option value="Tidak hadir">Mohon maaf, tidak hadir</option>
+          </select>
+
+          <label for="guestCount">Jumlah orang</label>
+          <select id="guestCount">
+            <option value="1">1 orang</option>
+            <option value="2">2 orang</option>
+            <option value="3">3 orang</option>
+            <option value="4">4 orang</option>
+            <option value="5">5 orang</option>
+          </select>
+
+          <label for="rsvpMessage">Pesan (opsional)</label>
+          <textarea id="rsvpMessage" rows="3"
+                    placeholder="Tuliskan pesan atau doa"></textarea>
+
+          <button type="submit" class="btn-primary full-button">
+            Kirim Konfirmasi WhatsApp
+          </button>
+        </form>
+
+        <p class="small-note">
+          Konfirmasi dikirim melalui WhatsApp panitia.
+        </p>
+      </div>
+    </section>
+
+    <!-- PENUTUP -->
+    <footer class="section floral-section footer">
+      <div class="content-panel">
+        <div class="gold-line"></div>
+        <h2>Terima Kasih</h2>
+        <p>
+          Sampai jumpa di momen istimewa wisuda
+          SMK SYADAM Tahun Pelajaran 2027.
+        </p>
+        <h3>Team Creative SMK SYADAM</h3>
+
+        <button id="shareButton" class="btn-outline">
+          Bagikan Undangan
+        </button>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- MUSIK -->
+  <audio id="backgroundMusic"
+         src="assets/musik.mp3"
+         loop preload="none"></audio>
+
+  <button id="musicToggle" class="music-toggle"
+          type="button" hidden>
+    ♫ Putar Musik
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,534 @@
+
+:root {
+    --navy: #123b78;
+    --blue: #1765b4;
+    --gold: #c39a36;
+    --white: #ffffff;
+    --soft-blue: #eaf4ff;
+    --text: #203c62;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: #f5faff;
+    line-height: 1.8;
+  }
+  
+  [hidden] {
+    display: none !important;
+  }
+  
+  button, input, select, textarea {
+    font: inherit;
+  }
+  
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  /* COVER VIDEO */
+  
+  .cover {
+    position: relative;
+    min-height: 100vh;
+    min-height: 100svh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+    isolation: isolate;
+    text-align: center;
+    padding: 25px;
+    background: #eaf4ff;
+  }
+  
+  .cover-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  .cover-shade {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.12);
+  }
+  
+  .cover-content {
+    width: 100%;
+    max-width: 850px;
+    animation: fadeIn 1s ease;
+  }
+  
+  .eyebrow {
+    color: var(--gold);
+    font-size: 12px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+  
+  .cover h1 {
+    color: var(--navy);
+    font-size: clamp(30px, 6vw, 56px);
+    line-height: 1.2;
+    text-shadow: 0 1px 8px rgba(255,255,255,.5);
+  }
+  
+  .cover-content > p:not(.eyebrow) {
+    color: var(--navy);
+    font-weight: 600;
+  }
+  
+  .guest-cover {
+    max-width: 540px;
+    margin: 30px auto 25px;
+    padding: 18px;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+    background: rgba(255,255,255,.42);
+    backdrop-filter: blur(4px);
+  }
+  
+  .guest-cover span {
+    font-size: 13px;
+  }
+  
+  .guest-cover h2 {
+    color: var(--navy);
+    font-size: clamp(21px, 4vw, 30px);
+    overflow-wrap: anywhere;
+  }
+  
+  /* TOMBOL */
+  
+  .btn-primary,
+  .btn-outline {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .25s ease;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(120deg, #e8cd82, #d0a443);
+    color: #163966;
+    border: 1px solid var(--gold);
+    box-shadow: 0 5px 16px rgba(31, 68, 116, .12);
+  }
+  
+  .btn-outline {
+    background: rgba(255,255,255,.8);
+    border: 1px solid var(--gold);
+    color: var(--navy);
+  }
+  
+  .btn-primary:hover,
+  .btn-outline:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* VIDEO BACKGROUND ISI UNDANGAN */
+  
+  .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 90vh;
+    min-height: 90svh;
+    display: grid;
+    place-items: center;
+    padding: 60px 20px;
+    text-align: center;
+    background: #f0f7ff;
+  }
+  
+  .background-video {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+  }
+  
+  .hero-shade {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, .42);
+    pointer-events: none;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 800px;
+    padding: 30px 15px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    color: var(--navy);
+    line-height: 1.3;
+  }
+  
+  .hero h2 {
+    color: var(--blue);
+    font-size: clamp(27px, 4vw, 38px);
+  }
+  
+  .hero-content > p:not(.eyebrow) {
+    color: var(--text);
+  }
+  
+  .hero-description {
+    max-width: 550px;
+    margin: 20px auto 25px;
+  }
+  
+  /* BACKGROUND FLORAL UNTUK ISI */
+  
+  .floral-section {
+    position: relative;
+    padding: 65px 22px;
+    text-align: center;
+  
+    /* Gambar floral tanpa logo */
+    background-image: url("assets/background-floral.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: scroll;
+  }
+  
+  .content-panel {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 35px 30px;
+    border: 1px solid rgba(195,154,54,.35);
+    border-radius: 20px;
+  
+    /* Putih transparan, bukan biru polos */
+    background: rgba(255,255,255,.78);
+    box-shadow: 0 8px 30px rgba(28,67,113,.08);
+  }
+  
+  .section h2 {
+    font-size: clamp(25px, 4vw, 36px);
+    color: var(--navy);
+    line-height: 1.35;
+  }
+  
+  .gold-line {
+    width: 75px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 5px;
+    margin: 20px auto;
+  }
+  
+  .greeting p:not(.eyebrow) {
+    max-width: 690px;
+    margin: 15px auto;
+  }
+  
+  .greeting h3,
+  .footer h3 {
+    margin-top: 20px;
+    color: var(--blue);
+  }
+  
+  /* INFORMASI ACARA */
+  
+  .event-card {
+    max-width: 600px;
+    margin: 28px auto;
+    padding: 28px 22px;
+    border-radius: 18px;
+    border: 1px solid rgba(195,154,54,.6);
+    background: rgba(255,255,255,.76);
+  }
+  
+  .event-card h3 {
+    font-size: 21px;
+    color: var(--blue);
+    margin-bottom: 12px;
+  }
+  
+  .event-card p {
+    margin: 8px 0;
+    overflow-wrap: anywhere;
+  }
+  
+  .event-card .btn-outline {
+    margin-top: 18px;
+  }
+  
+  .countdown-heading {
+    margin: 35px 0 18px;
+    color: var(--navy);
+  }
+  
+  .countdown {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+  
+  .countdown > div {
+    width: 85px;
+    min-height: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(195,154,54,.65);
+    border-radius: 13px;
+    background: rgba(255,255,255,.85);
+  }
+  
+  .countdown strong {
+    color: var(--blue);
+    font-size: 26px;
+    line-height: 1.4;
+  }
+  
+  .countdown span {
+    color: var(--text);
+    font-size: 12px;
+  }
+  
+  .small-note {
+    font-size: 12px;
+    margin-top: 15px;
+    color: var(--text);
+  }
+  
+  /* GALERI: KARTU TERPISAH DAN ADA JARAK */
+  
+  .gallery-panel {
+    max-width: 1150px;
+  }
+  
+  .section-intro {
+    margin: 12px auto 28px;
+  }
+  
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .gallery-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(195,154,54,.4);
+    border-radius: 17px;
+    background: rgba(255,255,255,.96);
+    box-shadow: 0 8px 25px rgba(25,62,108,.1);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+  
+  .gallery-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(25,62,108,.15);
+  }
+  
+  .gallery-card > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: #edf5ff;
+  }
+  
+  .gallery-info {
+    padding: 22px;
+  }
+  
+  .gallery-info h3 {
+    color: var(--navy);
+    font-size: 20px;
+    margin-bottom: 7px;
+  }
+  
+  .gallery-info p {
+    color: var(--text);
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  
+  .gallery-info video {
+    display: block;
+    width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    background: #e5edf7;
+  }
+  
+  /* FORM KONFIRMASI */
+  
+  .rsvp-form {
+    max-width: 550px;
+    margin: 25px auto 0;
+    padding: 25px;
+    text-align: left;
+    border: 1px solid rgba(195,154,54,.4);
+    border-radius: 16px;
+    background: rgba(255,255,255,.9);
+  }
+  
+  .rsvp-form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 14px 0 6px;
+  }
+  
+  .rsvp-form input,
+  .rsvp-form select,
+  .rsvp-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #bdcfe3;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--text);
+  }
+  
+  .rsvp-form input:focus,
+  .rsvp-form select:focus,
+  .rsvp-form textarea:focus {
+    outline: 2px solid #8bb9ed;
+    outline-offset: 1px;
+  }
+  
+  .full-button {
+    width: 100%;
+    margin-top: 22px;
+    white-space: normal;
+  }
+  
+  /* PENUTUP DAN MUSIK */
+  
+  .footer .content-panel {
+    max-width: 750px;
+  }
+  
+  .footer p {
+    margin: 16px auto;
+  }
+  
+  .music-toggle {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    z-index: 100;
+    padding: 11px 17px;
+    border-radius: 30px;
+    border: 1px solid var(--gold);
+    background: rgba(255,255,255,.95);
+    color: var(--navy);
+    box-shadow: 0 4px 16px rgba(20,50,90,.15);
+    cursor: pointer;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* RESPONSIF UNTUK HP */
+  
+  @media (max-width: 700px) {
+    .floral-section {
+      padding: 38px 13px;
+      background-position: center top;
+    }
+  
+    .content-panel {
+      padding: 27px 16px;
+      border-radius: 15px;
+    }
+  
+    .gallery-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  
+    .gallery-info {
+      padding: 18px;
+    }
+  
+    .gallery-info h3 {
+      font-size: 18px;
+    }
+  
+    .countdown {
+      gap: 8px;
+    }
+  
+    .countdown > div {
+      width: calc(25% - 8px);
+      min-width: 60px;
+    }
+  
+    .countdown strong {
+      font-size: 21px;
+    }
+  
+    .rsvp-form {
+      padding: 18px 14px;
+    }
+  
+    .hero {
+      min-height: 85vh;
+    }
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation: none !important;
+      scroll-behavior: auto !important;
+      transition: none !important;
+    }
+  }
+  
